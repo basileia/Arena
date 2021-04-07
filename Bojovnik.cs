@@ -86,10 +86,10 @@ namespace Arena
             }
             
         }
-       
-        public void ZobrazStavBojovnika()
+
+        public override string ToString()
         {
-            Console.WriteLine($"{Jmeno}\t Zbran: {Zbran}\t Zivot: {Zivot}\t Brneni: {Brneni}");
+            return $"{Jmeno}\t Zbran: {Zbran}\t Zivot: {Zivot}\t Brneni: {Brneni}";
         }
 
     }

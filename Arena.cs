@@ -29,7 +29,7 @@ namespace Arena
                         
             foreach (Bojovnik bojovnik in vsichniBojovnici)
             {
-                bojovnik.ZobrazStavBojovnika();
+                Console.WriteLine(bojovnik);
             }
 
             VytvorTiskovouOzdobu();
