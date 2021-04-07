@@ -43,9 +43,9 @@ namespace Arena
 		{
 			Jmeno = jmeno;
             Sila = sila <= 10 ? 10 : sila;
-            this.Zivot = zivot;
-            this.Brneni = brneni;
-            this.Zbran = zbran;
+            Zivot = zivot;
+            Brneni = brneni;
+            Zbran = zbran;
         }
 
         private int ZkontrolujANastavHodnotuVlastnosti(int hodnotaVlastnosti, int minimalniHodnota, int maximalniHodnota)
