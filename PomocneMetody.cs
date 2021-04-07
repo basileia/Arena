@@ -24,19 +24,14 @@ namespace Arena
 
         public static int NactiCeleCisloZKonzole(string dotaz)
         {
-            int cislo = 0;
-            bool vysledekPrevodu = false;
-
-            while (vysledekPrevodu == false || cislo < 1)
+        start:
+            Console.WriteLine(dotaz);
+            string pocetText = Console.ReadLine();
+            bool vysledekPrevodu = int.TryParse(pocetText, out int cislo);
+            while (!vysledekPrevodu || cislo <= 0)
             {
-                Console.WriteLine(dotaz);
-                string pocetText = Console.ReadLine();
-                vysledekPrevodu = int.TryParse(pocetText, out cislo);
-
-                if (vysledekPrevodu == false || cislo < 1)
-                {
-                    Console.WriteLine("Tohle není celé kladné číslo");
-                }
+                Console.WriteLine("Tohle není celé kladné číslo");
+                goto start;
             }
 
             return cislo;
